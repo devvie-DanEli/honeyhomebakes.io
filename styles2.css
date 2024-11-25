@@ -1,0 +1,647 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Adjust the top/bottom and left/right spacing */
+  height: 70px; /* Set a fixed height for consistent sizing */
+  background: linear-gradient(to right, white, #fe0094); /* Gradient background */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+/* Logo */
+.logo img {
+  max-height: 100px; /* Set a smaller size */
+  width: auto;      /* Maintain aspect ratio */
+  vertical-align: middle;
+}
+
+/* Navigation */
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: white;  /* Set the text color to #1d1d1d */
+  transition: color 0.3s;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+
+}
+
+.navbar nav ul li a:hover {
+  color: #1d1d1d; /* Keep the hover effect as it is */
+}
+
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('bakery-hero.jpg') no-repeat center center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #1d1d1d;
+}
+
+
+/* Reusable Title Styling */
+.section-title {
+  font-size: 2rem; /* Default font size */
+  color: #fe0094; /* Default color */
+  margin-bottom: 20px;
+    margin-top: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Reusable Title Styling */
+.section-title-2 {
+  font-size: 2rem; /* Default font size */
+  color: #fe0094; /* Default color */
+  margin-bottom: 50px;
+    margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+
+
+/* Customize for specific sections if needed */
+#menu .section-title {
+  font-size: 2.5rem; /* Example of a unique size for the menu section */
+  color: #fe0094; /* Example of a unique color for the menu section */
+}
+
+
+
+/* Menu Section */
+.menu {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items to the next row if space is limited */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Centers the items horizontally */
+}
+
+.item {
+  flex: 1 1 calc(33.333% - 20px); /* Allows 3 items per row, adjusts for gap */
+  max-width: 300px; /* Optional: limits the width */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  border-radius: 8px; /* Optional: rounded corners */
+  overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.item:hover {
+  transform: scale(1.05); /* Slightly enlarges the item */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deepens the shadow */
+  background-color: #f8f8f8; /* Lightens the background */
+}
+
+/* Image styling */
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #f8b400; /* Optional: visual separation */
+}
+
+/* Title styling */
+.item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #1d1d1d;
+}
+
+/* Description styling */
+.item p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 calc(50% - 20px); /* Adjusts to 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 100%; /* Stacks items in a single column on very small screens */
+  }
+}
+
+
+/* About Section */
+.about {
+  padding: 50px;
+  background: #f4f4f4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about p {
+  max-width: 800px; /* Increased max-width for better readability on larger screens */
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #fe0094;
+  line-height: 1.6;
+  padding: 0 15px; /* Adds some padding for better text readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+  
+  .about p {
+    font-size: 1.1rem; /* Slightly increase font size on smaller screens */
+    max-width: 90%; /* Allows for more flexibility on small screens */
+    padding: 0 10px; /* Reduces padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 20px; /* Adjust padding further for very small screens */
+  }
+  
+  .about p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    max-width: 100%; /* Full width for smaller screens */
+    padding: 0 5px; /* Further reduce padding */
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #1d1d1d;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #1d1d1d;
+  color: #fff;
+  text-align: center;
+}
+
+.image-container {
+  position: relative; /* Makes the container a reference point for overlapping content */
+  width: 100%;
+}
+
+.image-placeholder {
+  position: relative; /* Ensures child elements are positioned relative to this container */
+  width: 100%;
+  height: 1000px; /* Adjust as needed */
+  background: url('https://i.imgur.com/0JwltQt.jpeg') no-repeat center center;
+  background-size: cover;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+.image-placeholder2 {
+  position: relative; /* Ensures child elements are positioned relative to this container */
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  background: #1d1d1d;
+  background-size: cover;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+
+.image-placeholder3 {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust as needed */
+  background: #1d1d1d;
+  background-size: cover;
+
+  
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures text is centered within the container */
+}
+
+.text-and-button {
+  display: flex;
+  flex-direction: column; /* Stack the text and button vertically */
+  align-items: center; /* Horizontally centers both text and button */
+  color: white; /* Make sure text is visible */
+}
+
+.text-and-button .button {
+  margin-top: 20px; /* Adjust space between text and button */
+  padding: 12px 24px; /* Adjust the button's p
+
+
+.image-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black
+  z-index: 1; /* Keep the filter below the content */
+}
+
+.overlap-content {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.overlap-content2 {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext1 {
+  position: absolute; /* Allows overlapping */
+  top: 20%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext2 {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext3 {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.bottomtext3:hover {
+  background: #1d1d1d;
+}
+
+.bottomtext5 {
+  position: absolute; /* Allows overlapping */
+  top: 10%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px;
+  background: #1d1d1d;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjusts the number of columns */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center the items */
+  transition: all 0.3s ease-in-out; /* Smooth transition for grid changes */
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Maintains 1:1 ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transform for enlarging and stacking */
+}
+
+/* Image inside gallery item */
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 8px; /* Optional: rounded corners for the image */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+/* Hover effect to enlarge image and push surrounding items away */
+.gallery-item:hover {
+  transform: scale(1.2); /* Increase size of the hovered item */
+  z-index: 10; /* Bring the hovered image to the front */
+}
+
+/* Apply sway to all surrounding items (top, bottom, left, right) when one is hovered */
+.gallery-item:hover ~ .gallery-item {
+  transform: translate(15px, 15px); /* Move surrounding items diagonally */
+}
+
+.gallery-item:hover ~ .gallery-item img {
+  transform: scale(1); /* Ensure other images stay their original size */
+}
+
+/* Ensure the hovered image scales up */
+.gallery-item:hover img {
+  transform: scale(1.2); /* Scale up the hovered image */
+}
+
+/* Modal (Image Preview) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Black background */
+  background-color: rgba(0, 0, 0, 0.9); /* Black with transparency */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusts the number of items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr; /* Stacks items in a single column on very small screens */
+  }
+}
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-section {
+  flex: 1 1 22%; /* Responsive width */
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+    font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-decoration: none;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+
+.neuefont {
+	font-family: 'NeueMontreal-Bold', sans-serif;
+	font-size: 20px;
+}
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.social-icon {
+margin-top: 100px;
+  width: 10%; /* Adjust based on your needs */
+  height: auto; /* Maintains aspect ratio */
+  filter: invert(1); /* Fully inverts the colors */
+}
+
+.cta-button2 {
+  background: #fe0094;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 100px;
+}
+
+
+
+
+/*fonts*/
+	@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype'),
+         url('fonts/BebasNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+		}
+	@font-face {
+    font-family: 'Bambino';
+    src: url('fonts/Bambino.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+		}
+	@font-face {
+    font-family: 'Helvetica CE Medium';
+    src: url('fonts/Helvetica CE Medium.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}
+	@font-face {
+    font-family: 'Antapani-ExtraBold';
+    src: url('fonts/Antapani-ExtraBold.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}
+	@font-face {
+    font-family: 'NeueMontreal-Bold';
+    src: url('fonts/NeueMontreal-Bold.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}

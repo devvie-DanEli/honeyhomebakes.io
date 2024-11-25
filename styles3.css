@@ -1,0 +1,988 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Adjust the top/bottom and left/right spacing */
+  height: 70px; /* Set a fixed height for consistent sizing */
+  background: linear-gradient(to right, white, #fe0094); /* Gradient background */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+/* Logo */
+.logo img {
+  max-height: 100px; /* Set a smaller size */
+  width: auto;      /* Maintain aspect ratio */
+  vertical-align: middle;
+}
+
+/* Navigation */
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: white;  /* Set the text color to #1d1d1d */
+  transition: color 0.3s;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+
+}
+
+.navbar nav ul li a:hover {
+  color: #1d1d1d; /* Keep the hover effect as it is */
+}
+
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('bakery-hero.jpg') no-repeat center center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button4 {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 30px;
+}
+
+.cta-button4:hover {
+  background: #1d1d1d;
+}
+
+
+.cta-button:hover {
+  background: #1d1d1d;
+}
+
+.cta-button2 {
+  background: #fe0094;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin-top: 100px;
+}
+
+.adjuster {
+  margin-top: 10px;
+}
+
+.adjuster2 {
+  margin-bottom: 30px;
+}
+.cta-button2:hover {
+  background: white;
+  color: black;
+}
+
+
+
+
+
+
+/* Reusable Title Styling */
+.section-title {
+  font-size: 2rem; /* Default font size */
+  color: #fe0094; /* Default color */
+  margin-bottom: 20px;
+    margin-top: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Reusable Title Styling */
+.section-title-2 {
+  font-size: 2rem; /* Default font size */
+  color: #fe0094; /* Default color */
+  margin-bottom: 50px;
+    margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+/* Customize for specific sections if needed */
+#menu .section-title {
+  font-size: 2.5rem; /* Example of a unique size for the menu section */
+  color: #fe0094; /* Example of a unique color for the menu section */
+}
+
+
+
+/* Menu Section */
+.menu {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items to the next row if space is limited */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Centers the items horizontally */
+}
+
+.item {
+  flex: 1 1 calc(33.333% - 20px); /* Allows 3 items per row, adjusts for gap */
+  max-width: 300px; /* Optional: limits the width */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  border-radius: 8px; /* Optional: rounded corners */
+  overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.item:hover {
+  transform: scale(1.05); /* Slightly enlarges the item */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deepens the shadow */
+  background-color: #f8f8f8; /* Lightens the background */
+}
+
+/* Image styling */
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #f8b400; /* Optional: visual separation */
+}
+
+/* Title styling */
+.item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #1d1d1d;
+}
+
+/* Description styling */
+.item p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 calc(50% - 20px); /* Adjusts to 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 100%; /* Stacks items in a single column on very small screens */
+  }
+}
+
+
+.bebas {
+	font-family: 'BebasNeue-Regular';
+	font-size: 40px;
+}
+
+/* About Section */
+.about {
+  padding: 50px;
+  background: #1d1d1d;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about p {
+  max-width: 800px; /* Increased max-width for better readability on larger screens */
+  margin: 0 auto;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+  padding: 0 15px; /* Adds some padding for better text readability */
+}
+
+.about-us {
+  font-size: 4em;
+  text-align: center;
+  color: #fe0094; /* Example color */
+  margin: 20px 0;
+  font-family: 'BebasNeue-Regular';
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+  
+  .about p {
+    font-size: 1.1rem; /* Slightly increase font size on smaller screens */
+    max-width: 90%; /* Allows for more flexibility on small screens */
+    padding: 0 10px; /* Reduces padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 20px; /* Adjust padding further for very small screens */
+  }
+  
+  .about p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    max-width: 100%; /* Full width for smaller screens */
+    padding: 0 5px; /* Further reduce padding */
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #fe0094;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #1d1d1d;
+}
+
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the html and body elements cover the full height of the viewport */
+}
+
+/* Layout Styling */
+body {
+  display: flex;
+  flex-direction: column; /* Allows stacking of header, main content, and footer */
+  min-height: 100vh; /* Ensures the body always takes up at least 100% of the viewport height */
+}
+
+/* Main Content Section */
+.contact {
+  flex: 1; /* Ensures this section expands to fill the space between the header and footer */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #1d1d1d;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Pushes the footer to the bottom when there isn't enough content */
+}
+
+
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-section {
+  flex: 1 1 22%; /* Responsive width */
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+    font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-decoration: none;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+
+
+
+
+
+
+.image-container {
+  position: relative; /* Makes the container a reference point for overlapping content */
+  width: 100%;
+}
+
+/* Image Placeholder for Slideshow */
+.image-placeholder {
+  position: relative; /* Ensures child elements are positioned relative to this container */
+  width: 100%;
+  height: 1000px; /* Adjust as needed */
+  background: url('https://i.imgur.com/0JwltQt.jpeg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  animation: slideshow 20s infinite; /* 32s total time (8s per image, 4 images) */
+}
+
+/* Slideshow Animation */
+@keyframes slideshow {
+  0% {
+    background-image: url('https://i.imgur.com/0JwltQt.jpeg'); /* First image */
+  }
+  25% {
+    background-image: url('https://i.imgur.com/VNcT935.jpeg'); /* Second image */
+  }
+  50% {
+    background-image: url('https://i.imgur.com/0JwltQt.jpeg'); /* Third image */
+  }
+  75% {
+    background-image: url('https://i.imgur.com/VNcT935.jpeg'); /* Fourth image */
+  }
+  100% {
+    background-image: url('https://i.imgur.com/0JwltQt.jpeg'); /* Loop back to the first image */
+  }
+}
+
+
+
+.image-placeholder2 {
+  position: relative; /* Ensures child elements are positioned relative to this container */
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  background: #1d1d1d;
+  background-size: cover;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+.image-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Keep the filter below the content */
+}
+
+.overlap-content {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.overlap-content2 {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext1 {
+  position: absolute; /* Allows overlapping */
+  top: 20%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext2 {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+.bottomtext3 {
+  position: absolute; /* Allows overlapping */
+  top: 50%; /* Center vertically */
+  left: 10%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts alignment to the center */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2; /* Places the content above the filter */
+}
+
+
+/* Gallery Section */
+
+/* Adding keyframe animation for continuous movement */
+@keyframes moveAcross {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateX(-100%); /* Move images off the screen completely */
+  }
+}
+
+.gallery {
+  padding: 50px;
+  background: #f4f4f4;
+  text-align: center;
+  overflow: hidden; /* Hide anything that goes outside the gallery container */
+  position: relative;
+}
+
+/* Container for the gallery items */
+.gallery-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  width: max-content; /* Allow the container to grow with the number of items */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  animation: moveAcross 90s linear infinite; /* Slower animation, continuous loop */
+}
+
+/* Individual gallery items */
+.gallery-item {
+  flex: 0 0 auto; /* Prevent item from shrinking */
+  width: 300px; /* Fixed width for the gallery items */
+  height: 200px; /* Fixed height for the gallery items */
+  margin-right: 20px; /* Space between items */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative; /* Ensure images are positioned correctly */
+  transition: transform 0.3s ease-in-out; /* Smooth scale transition on hover */
+}
+
+/* Image inside gallery item */
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Hover effect to enlarge image and push surrounding items away */
+.gallery-item:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.gallery-item:hover ~ .gallery-item {
+  transform: translateX(10px);
+}
+
+.gallery-item:hover ~ .gallery-item img {
+  transform: scale(1);
+}
+
+
+
+/* Modal (Image Preview) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Black background */
+  background-color: rgba(0, 0, 0, 0.9); /* Black with transparency */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 250px; /* Adjust the item width for smaller screens */
+    height: 150px; /* Adjust the item height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 200px; /* Further adjust the width for very small screens */
+    height: 150px; /* Adjust height for very small screens */
+  }
+}
+
+
+
+.social-icon {
+margin-top: 100px;
+  width: 10%; /* Adjust based on your needs */
+  height: auto; /* Maintains aspect ratio */
+  filter: invert(1); /* Fully inverts the colors */
+}
+
+
+    /* Founder Section Styling */
+    .founder-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .founder-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 70px;
+      margin-right: 60px;
+    }
+
+    .founder-description {
+      flex: 1;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .founder-description h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .founder-description p {
+      font-size: 1rem;
+      color: #fe0295;
+    }
+	
+	
+	.about-image {
+  width: 30%; /* Adjust the width to a percentage of the parent container */
+  max-width: 600px; /* Set a max width to prevent the image from becoming too large */
+  height: auto; /* Maintain the aspect ratio of the image */
+  margin: 40px auto; /* Add some spacing above and below, and center it */
+  display: block; /* Center the image by making it a block element */
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+  }
+}
+
+
+
+/* Category Section */
+.category-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.category-title {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'BebasNeue-Regular';
+}
+
+.menu-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.menu-icon {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.icon-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Smooth animation */
+}
+
+.icon-label {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #555;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+
+
+
+/* Hover Effects */
+.icon-image:hover {
+  transform: scale(1.2); /* Enlarges the icon */
+ color: white;
+  filter: brightness(1.2); /* Brightens the image */
+}
+
+
+/* Modal Styles */
+.menu-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto; /* Allows scrolling if content exceeds the viewport */
+  opacity: 0; /* Start with hidden opacity */
+  transform: scale(0.8); /* Start with small size */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and scale */
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* Controls the maximum width */
+  position: relative;
+  text-align: center;
+  max-height: 80vh; /* Maximum height of the modal relative to the viewport */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+
+
+
+
+
+
+/* Modal Styles */
+.menu-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto; /* Allows scrolling if content exceeds the viewport */
+  opacity: 0; /* Start with hidden opacity */
+  transform: scale(0.8); /* Start with small size */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and scale */
+}
+
+/* Modal Styles */
+.menu-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto; /* Allows scrolling if content exceeds the viewport */
+  opacity: 0; /* Start with hidden opacity */
+  transform: scale(1); /* Keep at normal size */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity only */
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* Controls the maximum width */
+  position: relative;
+  text-align: center;
+  max-height: 80vh; /* Maximum height of the modal relative to the viewport */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  opacity: 0; /* Modal content starts with opacity 0 */
+  transform: scale(0.8); /* Modal content starts small */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both opacity and scale */
+}
+
+/* Close Button */
+.close-button {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Individual Menu Item */
+.menu-item {
+  margin-bottom: 20px; /* Space between menu items */
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Limit the height of the images */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 8px;
+}
+
+.menu-details {
+  margin-top: 10px;
+}
+
+.menu-item-title {
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-family: 'BebasNeue-Regular';
+}
+
+.menu-item-description {
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-family: 'NeueMontreal-Bold', sans-serif;
+}
+
+.menu-item-price {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Modal Show - Fade and Pop-up Effect */
+.menu-modal.show {
+  display: flex; /* Show the modal */
+  opacity: 1; /* Fade in the modal background */
+  transition: opacity 0.3s ease; /* Smooth transition for background opacity */
+}
+
+/* Modal Content Show - Pop-up Effect */
+.menu-modal.show .modal-content {
+  opacity: 1; /* Make modal content visible */
+  transform: scale(1); /* Grow the modal content to full size */
+  animation: popUp 0.3s ease-out; /* Apply the pop-up animation */
+}
+
+/* Pop-Up Animation */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); /* Start small */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+
+
+.neuefont {
+	font-family: 'NeueMontreal-Bold', sans-serif;
+	font-size: 20px;
+}
+
+
+/*fonts*/
+	@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype'),
+         url('fonts/BebasNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+		}
+	@font-face {
+    font-family: 'Bambino';
+    src: url('fonts/Bambino.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+		}
+	@font-face {
+    font-family: 'Helvetica CE Medium';
+    src: url('fonts/Helvetica CE Medium.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}
+	@font-face {
+    font-family: 'Antapani-ExtraBold';
+    src: url('fonts/Antapani-ExtraBold.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}
+	@font-face {
+    font-family: 'NeueMontreal-Bold';
+    src: url('fonts/NeueMontreal-Bold.otf') format('opentype'),
+    font-weight: normal;
+    font-style: normal;
+	}
